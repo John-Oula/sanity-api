@@ -17,6 +17,13 @@ export default {
         maxLength: 96,
       },
     },
+      {
+          name: 'category',
+          title: 'Group',
+          type: 'reference',
+          to: [{ type: 'category' }]
+
+      },
     {
       name: 'author',
       title: 'Author',
@@ -49,24 +56,10 @@ export default {
           type: "mux.video"
         },
     {
-      name: 'mainMenu',
-      title: 'Which sub-menu would you like to reference?',
-      type: 'reference',
-      to: [{ type: 'submenu' }]
-
-    },
-    {
-      name: 'category',
-      title: 'Category',
-      type: 'reference',
-      to: [{ type: 'category' }]
-
-    },
-    {
       name: 'heading',
       title: 'Which homepage heading would you like to reference?',
       type: 'reference',
-      to: [{ type: 'heading' }]
+      to: [{ type: 'homeBlock' }]
 
     },
   ],

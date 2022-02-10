@@ -1,9 +1,8 @@
 export default {
-
-  name: 'subb',
-  title: 'Sub Menu',
+  name: 'footer',
+  title: 'Footer',
   type: 'object',
-  fields:[
+  fields: [
     {
       name: 'title',
       title: 'Title',
@@ -14,18 +13,16 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'title',
+        source: (doc, options) => options.parent.title,
         maxLength: 96,
       },
     },
     {
-      name: 'category',
-      title: 'Which category does the post(s) fall under?',
-      type: 'reference',
-      to: [{ type: 'category' }]
-
+      name: 'publishedAt',
+      title: 'Published at',
+      type: 'datetime',
     },
-  ]
 
+  ],
 
 }

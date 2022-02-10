@@ -8,38 +8,59 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import blockContent from './blockContent'
 import category from './category'
 import post from './post'
-import footer from './footer'
+import footerMenu from './footerMenu'
 import author from './author'
-import menu from './menu'
+import colors from './colors'
+import users from './users'
+import contentBlock from './contentBlock'
+import menu from '../objects/menu'
+
+import homeBlock from '../objects/homeBlocks'
+import footer from '../objects/footer'
+import submenu from '../objects/sub_menu'
+import select from '../objects/selectOptions'
+import checkbox from '../objects/checkboxOptions'
+import navigationMenu from './navigationMenu'
 import carousel from './imageSlider'
 import partners from './partners'
-import privacy from './privacy'
-import submenu from './submenu'
-import headings from './contentTitleBlocks'
+import cv_upload from './cv_upload'
+import team from './team'
+
+import forms from './forms'
+
 
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
-  // We name our schema
-  name: 'truenorth-schema',
-  // Then proceed to concatenate our document type
-  // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([
-    // The following are document types which will appear
-    // in the studio.
-    post,
-    author,
-    category,
+    // We name our schema
+    name: 'truenorth-schema',
+    // Then proceed to concatenate our document type
+    // to the ones provided by any plugins that are installed
+    types: schemaTypes.concat([
+        // The following are document types which will appear
+        // in the studio.
+        post,
+        author,
+        category,
+        cv_upload,
+        forms,
+        colors,
+        submenu,
+        team,
 
-    menu,
-    footer,
-    headings,
-    privacy,
-    submenu,
-    partners,
-    // When added to this list, object types can be used as
-    // { type: 'typename' } in other document schemas
-    blockContent,
-      carousel,
-  ]),
+        menu,
+        navigationMenu,
+        contentBlock,
+        select,
+        checkbox,
+        footer,
+        homeBlock,
+        footerMenu,
+        users,
+        partners,
+        // When added to this list, object types can be used as
+        // { type: 'typename' } in other document schemas
+        blockContent,
+        carousel,
+    ]),
 })

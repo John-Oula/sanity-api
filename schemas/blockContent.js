@@ -11,10 +11,36 @@
 
 import React from 'react'
 
-const highlightIcon = () => (
-    <span style={{fontWeight: 'bold'}}>V</span>
-)
 
+// function Team({data}) {
+//   console.log(data)
+//
+//   return (
+//       <div >
+//         {
+//           data?.members.map(each =>{
+//             return(
+//                 <div>
+//                   <div overflow={`hidden`} size={`150pt`}>
+//                     {/*<img src={urlFor(each?.image).url()} width={`auto`} h={`auto`} fallbackSrc={`https://via.placeholder.com/200`} />*/}
+//                   </div>
+//                   <p mt={5} size={`md`} as={`h5`}>{each?.name}</p>
+//                   <p fontSize={`sm`}> {each?.description}</p>
+//
+//                 </div>
+//             )
+//           })
+//         }
+//
+//
+//
+//
+//       </div>
+//   );
+// }
+const teamRender = props => (
+    <span style={{ backgroundColor: 'yellow' }}>Team box</span>
+)
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -23,9 +49,21 @@ export default {
     {
       title: 'Block',
       type: 'block',
+      of:[
+        {
+          name: "inlineVideo",
+          type: "file",
+          title: "Inline Video Player",
+          options:{
+            accept:"video/*",
+          },
+        },
+
+      ],
     // {
     //   type: 'youtube'
     // },
+
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value
       // you want and decide how you want to deal with it where you want to
@@ -49,9 +87,10 @@ export default {
           { "title": "Code", "value": "code" },
           { "title": "Underline", "value": "underline" },
           { "title": "Strike", "value": "strike-through" },
-          {title: 'Video', value: 'video', blockEditor: {
-            icon: highlightIcon
-            }},
+          // {title: 'Video', value: 'video', blockEditor: {
+          //   icon: highlightIcon,
+          //     render: videoField
+          //   }},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -67,6 +106,7 @@ export default {
               },
             ],
           },
+
         ],
       },
     },
@@ -77,5 +117,44 @@ export default {
       type: 'image',
       options: {hotspot: true},
     },
+    {
+      name: "forms",
+      type: "object",
+      title: "Forms",
+
+          fields: [
+            {
+              name: 'forms',
+              title: 'Which form would you like to reference?',
+              type: 'reference',
+              to: [{ type: 'forms' }]
+
+            },
+          ],
+
+
+
+
+    },
+    {
+      name: "teams",
+      type: "object",
+      title: "Team",
+      icon: () => 'T',
+      render: teamRender,
+          fields: [
+            {
+              name: 'teamMember',
+              title: 'Add team members',
+              type: 'array',
+              of: [{ type: 'reference',to:[{type:'team'}] }]
+
+            },
+          ],
+
+
+
+
+    }
   ],
 }
