@@ -12,10 +12,10 @@ import footerMenu from './footerMenu'
 import author from './author'
 import colors from './colors'
 import users from './users'
-import contentBlock from './contentBlock'
+
 import menu from '../objects/menu'
 
-import homeBlock from '../objects/homeBlocks'
+import heading from '../objects/heading'
 import footer from '../objects/footer'
 import submenu from '../objects/sub_menu'
 import select from '../objects/selectOptions'
@@ -25,6 +25,7 @@ import carousel from './imageSlider'
 import partners from './partners'
 import cv_upload from './cv_upload'
 import team from './team'
+import youtube from './youtube'
 
 import forms from './forms'
 
@@ -47,14 +48,14 @@ export default createSchema({
         colors,
         submenu,
         team,
-
+    youtube,
         menu,
         navigationMenu,
-        contentBlock,
+
         select,
         checkbox,
         footer,
-        homeBlock,
+        heading,
         footerMenu,
         users,
         partners,

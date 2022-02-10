@@ -43,7 +43,7 @@ export default () =>
                             S.listItem()
                                 .title('Home Page sections')
                                 .child(
-                                    S.documentTypeList('homeBlock')
+                                    S.documentTypeList('heading')
                                 ),
                             S.listItem()
                                 .title('Partners')

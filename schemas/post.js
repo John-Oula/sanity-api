@@ -56,10 +56,10 @@ export default {
           type: "mux.video"
         },
     {
-      name: 'heading',
+      name: 'headings',
       title: 'Which homepage heading would you like to reference?',
       type: 'reference',
-      to: [{ type: 'homeBlock' }]
+      to: [{ type: 'heading' }]
 
     },
   ],

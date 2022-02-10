@@ -1,6 +1,6 @@
 export default {
 
-    name: 'homeBlock',
+    name: 'heading',
     title: 'Home Content',
     type: 'document',
     fields:[

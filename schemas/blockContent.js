@@ -58,11 +58,12 @@ export default {
             accept:"video/*",
           },
         },
+        {
+          type: 'youtube'
+        },
 
       ],
-    // {
-    //   type: 'youtube'
-    // },
+
 
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value
