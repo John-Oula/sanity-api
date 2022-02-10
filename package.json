@@ -8,7 +8,8 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
-    "build": "sanity build"
+    "test": "sanity check",
+    "build": "sanity build public -y"
   },
   "keywords": [
     "sanity"
@@ -16,7 +17,6 @@
   "dependencies": {
     "@sanity/base": "^2.25.0",
     "@sanity/core": "^2.25.0",
-    "@sanity/cli": "2.27.0",
     "@sanity/default-layout": "^2.25.0",
     "@sanity/default-login": "^2.24.1",
     "@sanity/desk-tool": "^2.25.0",
@@ -30,7 +30,9 @@
     "sanity-plugin-mux-input": "^1.1.0",
     "styled-components": "^5.2.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@sanity/cli": "^2.27.0"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/John-Oula/API.git"
