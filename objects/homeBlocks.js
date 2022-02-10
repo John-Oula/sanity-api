@@ -2,7 +2,7 @@ export default {
 
     name: 'homeBlock',
     title: 'Home Content',
-    type: 'object',
+    type: 'document',
     fields:[
         {
             name: 'title',

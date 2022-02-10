@@ -43,9 +43,7 @@ export default () =>
                             S.listItem()
                                 .title('Home Page sections')
                                 .child(
-                                    S.document()
-                                        .schemaType('contentBlock')
-                                        .documentId('contentBlock')
+                                    S.documentTypeList('homeBlock')
                                 ),
                             S.listItem()
                                 .title('Partners')
