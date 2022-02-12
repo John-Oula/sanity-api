@@ -25,6 +25,7 @@ import carousel from './imageSlider'
 import partners from './partners'
 import cv_upload from './cv_upload'
 import team from './team'
+import company from './company'
 import youtube from './youtube'
 
 import forms from './forms'
@@ -51,7 +52,7 @@ export default createSchema({
     youtube,
         menu,
         navigationMenu,
-
+    company,
         select,
         checkbox,
         footer,

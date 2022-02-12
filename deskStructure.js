@@ -17,7 +17,17 @@ export default () =>
                             S.listItem()
                                 .title('Navigation menus')
                                 .child(
-                                    S.documentTypeList('menu')
+                                    S.document()
+                                        .schemaType('navigationMenu')
+                                        .documentId('navigationMenu')
+                                ),
+                            S.listItem()
+                                .title('Pages')
+                                .child(
+                                    S.documentTypeList('post')
+                                        .filter(
+                                            `_type == "post" && category == "News"`
+                                        )
                                 ),
                             S.listItem()
                                 .title('Footer')
@@ -36,9 +46,8 @@ export default () =>
                             S.listItem()
                                 .title('Image Slider')
                                 .child(
-                                    S.document()
-                                        .schemaType('carousel')
-                                        .documentId('carousel')
+                                    S.documentTypeList('imageSlider')
+
                                 ),
                             S.listItem()
                                 .title('Home Page sections')
@@ -83,7 +92,34 @@ export default () =>
                                 .child(
                                     S.documentTypeList('category')
                                 ),
+
+
                         ])),
-            // We also need to remove the new singletons from the main list
-            ...S.documentTypeListItems().filter(listItem => !['colors', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
+            S.listItem()
+                .title('Registrations')
+                .child(
+                    S.list()
+                        // Sets a title for our new list
+                        .title('Registrations')
+                        // Add items to the array
+                        // Each will pull one of our new singletons
+                        .items([
+                            S.listItem()
+                                .title('Individual Coaching')
+                                .child(
+                                    S.documentTypeList('users')
+                                ),
+                            S.listItem()
+                                .title('CV uploads')
+                                .child(
+                                    S.documentTypeList('cv_upload')
+                                ),
+                            S.listItem()
+                                .title('Companies & Organizations')
+                                .child(
+                                    S.documentTypeList('company'),
+                                ),
+])),
+                            // We also need to remove the new singletons from the main list
+            ...S.documentTypeListItems().filter(listItem => !['colors','users','company','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
         ])

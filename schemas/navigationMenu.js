@@ -5,7 +5,7 @@ export default {
       name: 'menuItems',
       title: 'Menu Items',
       type: 'array',
-      of:[{type: 'menu',}]
+      of:[{type: 'reference',to:[{type:'menu'}]}]
     }],
 
 }

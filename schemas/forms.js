@@ -36,7 +36,7 @@ export default {
                         type: 'string',
                         options: {
                             layout: 'radio',
-                            list: ['text', 'checkbox', 'file','select']
+                            list: ['text', 'checkbox', 'file','select','textarea','country','text-editor']
                         }
 
                     },
