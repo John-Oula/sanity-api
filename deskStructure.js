@@ -57,9 +57,7 @@ export default () =>
                             S.listItem()
                                 .title('Partners')
                                 .child(
-                                    S.document()
-                                        .schemaType('partners')
-                                        .documentId('partners')
+                                    S.documentTypeList('partners')
                                 ),
                         ])),
             S.listItem()
