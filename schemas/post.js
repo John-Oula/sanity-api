@@ -9,6 +9,17 @@ export default {
       type: 'string',
     },
     {
+      name: 'link',
+      title: 'Should be an external link?',
+      type: 'boolean',
+    },
+    {
+      name: 'externalLink',
+      title: 'URL',
+      type: 'url',
+      hidden: ({parent, value}) => !value && !parent?.link
+    },
+    {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
@@ -63,6 +74,9 @@ export default {
 
     },
   ],
+  initialValue:{
+    link: false
+  },
 
   preview: {
     select: {
