@@ -9,6 +9,11 @@ export default {
             type: 'string',
         },
         {
+            name: 'icon',
+            title: 'Icon',
+            type: 'image',
+        },
+        {
             name: 'dropdown',
             title: 'Dropdown Menu',
             type: 'boolean',
@@ -40,14 +45,7 @@ export default {
             to: [{ type: 'category' }]
 
         },
-        {
-            name: 'mainImage',
-            title: 'Main image',
-            type: 'image',
-            options: {
-                hotspot: true,
-            },
-        },
+
 
         {
             name: 'publishedAt',
@@ -56,5 +54,10 @@ export default {
         },
 
     ],
-
+    preview: {
+        select: {
+            title: 'title',
+            media: 'image',
+        },
+    },
 }

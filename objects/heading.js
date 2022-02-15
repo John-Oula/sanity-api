@@ -10,8 +10,23 @@ export default {
             type: 'string',
         },
         {
+            name: 'slug',
+            title: 'Slug',
+            type: 'slug',
+            options: {
+                source: 'title',
+                maxLength: 96,
+            },
+        },
+        {
             name:'featured',
             title: 'Feature block on the homepage',
+            type: 'boolean',
+
+        },
+        {
+            name:'sidebar',
+            title: 'Feature block on the sidebar',
             type: 'boolean',
 
         },
@@ -31,6 +46,7 @@ export default {
     ],
 
     initialValue:{
-        featured: false
+        featured: false,
+        sidebar: false,
     }
 }

@@ -36,6 +36,11 @@ export default {
       type: 'image',
     },
     {
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
+    },
+    {
       name: 'summary',
 
       type: 'string',
