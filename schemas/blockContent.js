@@ -11,6 +11,7 @@
 
 import React from 'react'
 
+import { Container, Card, Grid, Heading, Stack, Box, Flex,Text, Label, Switch } from '@sanity/ui'
 
 // function Team({data}) {
 //   console.log(data)
@@ -41,6 +42,11 @@ import React from 'react'
 const teamRender = props => (
     <span style={{ backgroundColor: 'yellow' }}>Team box</span>
 )
+
+const grid = props => (
+    <Flex style={{ backgroundColor: 'yellow' }}>{props.children}</Flex>
+)
+
 export default {
   title: 'Block Content',
   name: 'blockContent',
@@ -92,6 +98,10 @@ export default {
           //   icon: highlightIcon,
           //     render: videoField
           //   }},
+          {title: 'Grid', value: 'grid', blockEditor: {
+            icon: () => 'G',
+              render: grid
+            }},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -156,6 +166,26 @@ export default {
 
 
 
-    }
+    },
+    // {
+    //   name: "grid",
+    //   type: "object",
+    //   title: "Grid",
+    //   icon: () => 'G',
+    //   render: teamRender,
+    //   fields: [
+    //     {
+    //       name: 'teamMember',
+    //       title: 'Add team members',
+    //       type: 'array',
+    //       of: [{ type: 'reference',to:[{type:'team'}] }]
+    //
+    //     },
+    //   ],
+    //
+    //
+    //
+    //
+    // }
   ],
 }

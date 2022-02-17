@@ -19,6 +19,11 @@ export default {
             },
         },
         {
+            name: 'previewFull',
+            title: 'Preview full contents?',
+            type: 'boolean',
+        },
+        {
             name:'featured',
             title: 'Feature block on the homepage',
             type: 'boolean',
@@ -48,5 +53,6 @@ export default {
     initialValue:{
         featured: false,
         sidebar: false,
+        previewFull: false
     }
 }

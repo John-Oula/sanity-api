@@ -13,6 +13,7 @@ export default {
       title: 'Should be an external link?',
       type: 'boolean',
     },
+
     {
       name: 'externalLink',
       title: 'URL',
@@ -75,7 +76,8 @@ export default {
     },
   ],
   initialValue:{
-    link: false
+    link: false,
+    previewFull: false
   },
 
   preview: {

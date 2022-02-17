@@ -26,7 +26,10 @@ export default {
             name: 'image',
             title: 'Image',
             type: 'image',
-            description: 'This images will appear as a slider on the website'
+            description: 'This images will appear as a slider on the website',
+            options: {
+              hotspot: true,
+            },
 
           },
 
