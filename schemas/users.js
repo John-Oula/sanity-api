@@ -68,12 +68,12 @@ export default {
       type: 'file',
     },
     {
-     name:'form_field_11',
+     name:'finance',
 
       type: 'string',
     },
     {
-     name:'form_field_12',
+     name:'know_us',
 
       type: 'string',
     },
