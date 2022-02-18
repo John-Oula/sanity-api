@@ -20,6 +20,11 @@ export default {
 
       type: 'string',
     },
+    {
+      name: 'information',
+
+      type: 'string',
+    },
 
     {
       name: 'motivation_letter',
