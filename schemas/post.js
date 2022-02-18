@@ -69,7 +69,7 @@ export default {
         },
     {
       name: 'headings',
-      title: 'Which homepage heading would you like to reference?',
+      title: 'Which content heading block would you like to reference?',
       type: 'reference',
       to: [{ type: 'heading' }]
 

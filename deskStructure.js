@@ -50,7 +50,7 @@ export default () =>
 
                                 ),
                             S.listItem()
-                                .title('Home Page sections')
+                                .title('Page sections')
                                 .child(
                                     S.documentTypeList('heading')
                                 ),
@@ -119,5 +119,5 @@ export default () =>
                                 ),
 ])),
                             // We also need to remove the new singletons from the main list
-            ...S.documentTypeListItems().filter(listItem => !['colors','users','company','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
+            ...S.documentTypeListItems().filter(listItem => !['colors','users','company','menu','submenu','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
         ])
