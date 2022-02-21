@@ -50,7 +50,11 @@ export default {
         hotspot: true,
       },
     },
-
+    {
+      name: 'imagePreview',
+      title: 'Preview image',
+      type: 'boolean',
+    },
     {
       name: 'publishedAt',
       title: 'Published at',
