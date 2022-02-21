@@ -81,7 +81,8 @@ export default {
   ],
   initialValue:{
     link: false,
-    previewFull: false
+    previewFull: false,
+    imagePreview: false,
   },
 
   preview: {
