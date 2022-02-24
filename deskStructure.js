@@ -36,13 +36,20 @@ export default () =>
                                         .schemaType('footerMenu')
                                         .documentId('footerMenu')
                                 ),
-                            S.listItem()
-                                .title('Site Colors')
-                                .child(
-                                    S.document()
-                                        .schemaType('colors')
-                                        .documentId('colors')
-                                ),
+                                S.listItem()
+                                    .title('Site Colors')
+                                    .child(
+                                        S.document()
+                                            .schemaType('colors')
+                                            .documentId('colors')
+                                    ),
+                                    S.listItem()
+                                        .title('Homepage Image')
+                                        .child(
+                                            S.document()
+                                                .schemaType('hero')
+                                                .documentId('hero')
+                                        ),
                             S.listItem()
                                 .title('Image Slider')
                                 .child(
@@ -119,5 +126,5 @@ export default () =>
                                 ),
 ])),
                             // We also need to remove the new singletons from the main list
-            ...S.documentTypeListItems().filter(listItem => !['colors','users','company','menu','submenu','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
+            ...S.documentTypeListItems().filter(listItem => !['colors','user','hero','company','menu','submenu','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
         ])
