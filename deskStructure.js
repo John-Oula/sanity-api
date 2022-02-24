@@ -126,5 +126,5 @@ export default () =>
                                 ),
 ])),
                             // We also need to remove the new singletons from the main list
-            ...S.documentTypeListItems().filter(listItem => !['colors','user','hero','company','menu','submenu','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
+            ...S.documentTypeListItems().filter(listItem => !['colors','users','hero','company','menu','submenu','cv_upload','team', 'post','heading','contentBlock' ,'author', 'category','partners', 'navigationMenu', 'carousel', 'imageSlider','footerMenu'].includes(listItem.getId()))
         ])
