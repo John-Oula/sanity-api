@@ -83,7 +83,7 @@ export default {
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [{title: 'Bullet', name: 'bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -108,6 +108,18 @@ export default {
           {
             title: 'URL',
             name: 'link',
+            type: 'object',
+            fields: [
+              {
+                title: 'URL',
+                name: 'href',
+                type: 'url',
+              },
+            ],
+          },
+          {
+            title: 'Inline Url',
+            name: 'inlineUrl',
             type: 'object',
             fields: [
               {
