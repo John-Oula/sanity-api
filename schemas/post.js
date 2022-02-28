@@ -61,6 +61,11 @@ export default {
       type: 'datetime',
     },
     {
+      name: 'layout',
+      title: 'Table Layout',
+      type: 'boolean',
+    },
+    {
       name: 'body',
       title: 'Body',
       type: 'blockContent',
@@ -82,6 +87,7 @@ export default {
   initialValue:{
     link: false,
     previewFull: false,
+    imagePreview: false,
     imagePreview: false,
   },
 
