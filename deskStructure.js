@@ -1,6 +1,29 @@
 // deskStructure.js
 import S from '@sanity/desk-tool/structure-builder'
+import Iframe from 'sanity-plugin-iframe-pane'
+import resolveProductionUrl from './resolveProductionUrl'
 
+export const getDefaultDocumentNode = () => {
+    return S.document().views([
+      S.view.form(),
+      S.view
+        .component(Iframe)
+        .options({
+            // Required: Accepts an async function
+            url: (doc) => resolveProductionUrl(doc),
+            
+            
+            // Optional: Set the default size
+            defaultSize: `desktop`, // default `desktop`
+            // Optional: Add a reload button, or reload on new document revisions
+            reload: {
+              button: true, // default `undefined`
+              revision: true, // default `undefined`
+            },
+          })
+        .title('Preview'),
+    ])
+  }
 export default () =>
     S.list()
         .title('Truenorth Dashboard')

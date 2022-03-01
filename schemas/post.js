@@ -71,11 +71,12 @@ export default {
       type: 'blockContent',
     },
 
-        {
-          title: "Video file",
-          name: "video",
-          type: "mux.video"
-        },
+
+        // {
+        //   title: "Video file",
+        //   name: "video",
+        //   type: "mux.video"
+        // },
     {
       name: 'headings',
       title: 'Which content heading block would you like to reference?',

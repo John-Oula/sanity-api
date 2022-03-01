@@ -43,6 +43,11 @@ const teamRender = props => (
     <span style={{ backgroundColor: 'yellow' }}>Team box</span>
 )
 
+const backGround = (props) => {
+console.log(props)
+  return(<span style={{ backgroundColor: 'yellow' }}>{props.children}</span>)
+
+}
 const grid = props => (
     <Flex style={{ backgroundColor: 'yellow' }}>{props.children}</Flex>
 )
@@ -67,6 +72,11 @@ export default {
         {
           type: 'youtube'
         },
+        {
+          type: 'colorPicker',
+          icon: () => 'Bc',
+          render: backGround
+        },
 
       ],
 
@@ -77,6 +87,7 @@ export default {
       // use your content.
       styles: [
         {title: 'Normal', value: 'normal'},
+        
         {title: 'H1', value: 'h1'},
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
@@ -94,17 +105,29 @@ export default {
           { "title": "Code", "value": "code" },
           { "title": "Underline", "value": "underline" },
           { "title": "Strike", "value": "strike-through" },
+          
           // {title: 'Video', value: 'video', blockEditor: {
           //   icon: highlightIcon,
           //     render: videoField
           //   }},
-          {title: 'Grid', value: 'grid', blockEditor: {
-            icon: () => 'G',
-              render: grid
-            }},
+          // {title: 'Grid', value: 'grid', blockEditor: {
+          //   icon: () => 'G',
+          //     render: grid
+          //   }},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
+          {name: 'color', title: 'Color', type: 'color'},
+          { 
+            title: 'Section Header',
+            name: 'sectionHeader',
+            type: 'color',
+            blockEditor: {
+              icon: () => 'HD',
+              
+            },
+          },
+          {name: 'backgroundColor', title: 'Background Color', type: 'color'},
           {
             title: 'URL',
             name: 'link',
@@ -139,6 +162,12 @@ export default {
     {
       type: 'image',
       options: {hotspot: true},
+    },
+
+    {
+      name: 'favoriteColor',
+      title: 'Favorite color',
+      type: 'color'
     },
     {
       name: "forms",
