@@ -27,6 +27,7 @@ import cv_upload from './cv_upload'
 import team from './team'
 import company from './company'
 import youtube from './youtube'
+import googleDrive from './googleDrive'
 import hero from './hero'
 
 import forms from './forms'
@@ -45,6 +46,7 @@ export default createSchema({
         post,
         author,
         category,
+        googleDrive,
         cv_upload,
         forms,
         colors,

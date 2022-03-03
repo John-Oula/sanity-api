@@ -100,6 +100,18 @@ export default () =>
                         // Each will pull one of our new singletons
                         .items([
                             S.listItem()
+  .title('Articles By Category')
+  .child(
+    S.documentTypeList('category')
+      .title('Articles by Category')
+      .child(categoryId =>
+        S.documentList()
+          .title('Posts')
+          .filter('_type == "post" && $categoryId in category[]._ref')
+          .params({ categoryId })
+      )
+  ),
+                            S.listItem()
                                 .title('Blog Posts')
                                 .child(
                                     S.documentTypeList('post')

@@ -73,6 +73,11 @@ export default {
           type: 'youtube'
         },
         {
+          type:'googleDrive',
+          icon: () => 'G',
+      
+        },
+        {
           type: 'colorPicker',
           icon: () => 'Bc',
           render: backGround
