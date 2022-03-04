@@ -104,11 +104,11 @@ export default () =>
   .child(
     S.documentTypeList('category')
       .title('Articles by Category')
-      .child(categoryId =>
+      .child(_id =>
         S.documentList()
           .title('Posts')
-          .filter('_type == "post" && $categoryId in category[]._ref')
-          .params({ categoryId })
+          .filter('_type == "post" && $_id in category[]._ref')
+          .params({ _id })
       )
   ),
                             S.listItem()

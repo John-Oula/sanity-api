@@ -13,32 +13,7 @@ import React from 'react'
 
 import { Container, Card, Grid, Heading, Stack, Box, Flex,Text, Label, Switch } from '@sanity/ui'
 
-// function Team({data}) {
-//   console.log(data)
-//
-//   return (
-//       <div >
-//         {
-//           data?.members.map(each =>{
-//             return(
-//                 <div>
-//                   <div overflow={`hidden`} size={`150pt`}>
-//                     {/*<img src={urlFor(each?.image).url()} width={`auto`} h={`auto`} fallbackSrc={`https://via.placeholder.com/200`} />*/}
-//                   </div>
-//                   <p mt={5} size={`md`} as={`h5`}>{each?.name}</p>
-//                   <p fontSize={`sm`}> {each?.description}</p>
-//
-//                 </div>
-//             )
-//           })
-//         }
-//
-//
-//
-//
-//       </div>
-//   );
-// }
+
 const teamRender = props => (
     <span style={{ backgroundColor: 'yellow' }}>Team box</span>
 )
@@ -99,7 +74,9 @@ export default {
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', name: 'bullet', value: 'bullet'}],
+      lists: [{title: 'Bullet', name: 'bullet', value: 'bullet'},
+      {title: 'Number', name: 'number', value: 'number'}
+    ],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -115,10 +92,10 @@ export default {
           //   icon: highlightIcon,
           //     render: videoField
           //   }},
-          // {title: 'Grid', value: 'grid', blockEditor: {
-          //   icon: () => 'G',
-          //     render: grid
-          //   }},
+          {title: 'Grid', value: 'grid', blockEditor: {
+            icon: () => 'G',
+              render: grid
+            }},
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
@@ -188,7 +165,11 @@ export default {
 
             },
           ],
-
+          preview: {
+            select: {
+              title: 'forms.title'
+            }
+          }
 
 
 
