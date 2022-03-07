@@ -143,7 +143,25 @@ export default {
     // as a block type.
     {
       type: 'image',
-      options: {hotspot: true},
+      options:{
+        metadata: [
+          'dimensions', // Always included
+        ],
+      },
+      
+        fields: [
+          {
+            name: 'alignImage',
+            title: 'Image configuration',
+            type: 'string',
+            options: {
+              layout: 'radio',
+              list: ['left', 'full-width', 'right']
+          }
+  
+          },
+        ],
+    
     },
 
     {
